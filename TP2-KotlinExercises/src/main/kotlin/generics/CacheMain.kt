@@ -1,0 +1,25 @@
+package dam.a51728.generics
+
+fun main(){
+    println("--- Word Frequency cache ---")
+    val cache: Cache<String, Int> = Cache(LinkedHashMap(mapOf("kotlin" to 1, "scala" to 1, "haskell" to 1)))
+    println("Size: ${cache.size()}")
+    println("Frequency of \"kotlin\": ${cache.get("kotlin")}")
+    println("getOrPut \"kotlin\": ${cache.getOrPut("kotlin"){1}}")
+    println("getOrPut \"java\": ${cache.getOrPut("java"){0}}")
+    println("Size after getOrPut: ${cache.size()}")
+    println("Transform \"kotlin\" (+1): ${cache.transform("kotlin"){value -> value + 1}}")
+    println("Transform \"cobol\" (+1): ${cache.transform("cobol"){value -> value + 1}}")
+    println("Snapshot: ${cache.snapshot()}")
+    println()
+    println("--- Id registry cache ---")
+    val intCache: Cache<Int, String> = Cache(LinkedHashMap(mapOf(1 to "Alice", 2 to "Bob")))
+    println("Id 1 -> ${intCache.get(1)}")
+    println("Id 2 -> ${intCache.get(2)}")
+    intCache.evict(1)
+    println("After evict id 1, size: ${intCache.size()}")
+    println("Id 1 after evict -> ${intCache.get(1)}")
+    println()
+    println("--- filterByValues update ---")
+    println("Words with frequency greater than 0: ${cache.filterByValues { freq -> freq > 0 }}")
+}

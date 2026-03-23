@@ -1,9 +1,14 @@
 package dam.a51728.vecLib
 
+operator fun Double.times(vec: Vec2): Vec2 = Vec2(vec.x * this, vec.y * this)
+
 fun main(){
     val a = Vec2(3.0, 4.0)
     val b = Vec2(1.0, 2.0)
 
+    val(x, y) = a
+    println("2.0 * a = ${2.0 * a}}")
+    println("val(x, y) = a -> $x and $y")
 
     println ("a = $a") // a = Vec2 (x=3.0 , y =4.0)
     println ("b = $b") // b = Vec2 (x=1.0 , y =2.0)

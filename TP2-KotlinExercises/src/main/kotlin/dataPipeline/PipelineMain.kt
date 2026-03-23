@@ -40,6 +40,8 @@ fun main(){
                 return@addStage res
             }
     }
+    //compose execution
+    //pipeline.compose("Trim", "Uppercase")
     val logs = listOf (
         " INFO : server started ",
         " ERROR : disk full ",
@@ -53,5 +55,9 @@ fun main(){
     println("Result:")
     for(line in res){
         println("\t$line")
+    }
+
+    fun fork(input: List<String>, pipeline1: Pipeline, pipeline2: Pipeline): Pair<List<String>, List<String>>{
+        return Pair(pipeline1.execute(input), pipeline2.execute(input))
     }
 }

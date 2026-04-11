@@ -5,4 +5,5 @@
     <color name="background_blue">#FF3D499F</color>
     <color name="background_blue_day">#FF6536DA</color>
     <color name="default_text_color">#FF000000</color>
+    <color name="night_land_color">#FFFFFFFF</color>
 </resources>

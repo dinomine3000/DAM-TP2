@@ -23,7 +23,7 @@
             tools:srcCompat="@drawable/background_portrait_day"/>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/weatherImage"
             android:layout_width="149dp"
             android:layout_height="132dp"
             android:layout_marginTop="120dp"
@@ -33,10 +33,11 @@
             app:srcCompat="@drawable/clear_day" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/updateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:elevation="2dp"
             android:text="@string/update_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -46,12 +47,12 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="0dp"
-            android:layout_height="400dp"
+            android:layout_height="420dp"
             android:layout_marginTop="80dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+            app:layout_constraintTop_toBottomOf="@+id/weatherImage">
 
                 <View
                     android:id="@+id/overlay"
@@ -164,54 +165,74 @@
                     app:layout_constraintTop_toBottomOf="@+id/temperatureLabel" />
 
                 <TextView
+                    android:id="@+id/timezoneLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/timezone_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/timeLabel" />
+
+                <TextView
                     android:id="@+id/pressureValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="88dp"
                     android:layout_marginTop="36dp"
+                    android:layout_marginEnd="40dp"
                     android:text="@string/wind_direction_label"
-                    app:layout_constraintStart_toEndOf="@+id/pressureLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/latitudeInput" />
 
                 <TextView
                     android:id="@+id/windDirValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="124dp"
+                    android:layout_marginEnd="40dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/wind_direction_label"
-                    app:layout_constraintStart_toEndOf="@+id/windDirLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/pressureValue" />
 
                 <TextView
                     android:id="@+id/windSpeedValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="148dp"
+                    android:layout_marginEnd="40dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/wind_direction_label"
-                    app:layout_constraintStart_toEndOf="@+id/windSpeedLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/windDirValue" />
 
                 <TextView
                     android:id="@+id/temperatureValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="141dp"
+                    android:layout_marginEnd="40dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/wind_direction_label"
-                    app:layout_constraintStart_toEndOf="@+id/temperatureLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/windSpeedValue" />
 
                 <TextView
                     android:id="@+id/timeValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="202dp"
+                    android:layout_marginEnd="40dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/wind_direction_label"
-                    app:layout_constraintStart_toEndOf="@+id/timeLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/temperatureValue" />
+
+                <TextView
+                    android:id="@+id/timezoneValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/wind_direction_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/timeValue" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

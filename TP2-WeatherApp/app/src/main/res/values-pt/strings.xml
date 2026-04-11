@@ -9,4 +9,5 @@
     <string name="wind_speed_label">Velocidade do Vento</string>
     <string name="temperature_label">Temperatura</string>
     <string name="time_label">Tempo</string>
+    <string name="timezone_label">Fuso-Horário</string>
 </resources>

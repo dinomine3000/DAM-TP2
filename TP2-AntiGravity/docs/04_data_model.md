@@ -4,7 +4,6 @@ Images
  - Object to represent and store each image.
  - Contains the URL from the API, as a String. It serves as the Unique Resource Locator, and its ID.
  - Also contains an Long attribute, Favorite Order. It is a value that is incremented globally by one each time an image is favorited, and stored on the image object. Used for ordering images.
- - Finally, contains a valid representation of the image data, acquired through the URL.
 
 Favorite List.
  - Object to store all the favorited images.
